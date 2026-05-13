@@ -549,6 +549,299 @@
     }
     .problem-text { font-size: 14px; color: var(--text-muted); line-height: 1.7; }
 
+    /* ── SPINE ALIGNMENT SECTION ── */
+    .spine-section {
+      background: var(--charcoal);
+      padding: 32px 20px;
+      text-align: center;
+    }
+    .spine-eyebrow {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+    .spine-heading {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28px;
+      font-weight: 500;
+      color: #fff;
+      line-height: 1.15;
+      margin-bottom: 24px;
+      letter-spacing: 0.02em;
+    }
+    .spine-hero {
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 20px;
+      background: linear-gradient(160deg, #1a2535 0%, #0f1a28 100%);
+      aspect-ratio: 4/3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    .spine-hero-inner {
+      width: 85%;
+      height: 75%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    .spine-pillow-shape {
+      width: 42%;
+      height: 55%;
+      background: linear-gradient(160deg, #e8eef5 0%, #c8d4de 50%, #a8b8c8 100%);
+      border-radius: 60% 60% 40% 40% / 50% 50% 40% 40%;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+      flex-shrink: 0;
+    }
+    .spine-line {
+      flex: 1;
+      height: 3px;
+      background: linear-gradient(90deg, #22c55e, #16a34a);
+      box-shadow: 0 0 12px rgba(34,197,94,0.6);
+      margin-left: -8px;
+      border-radius: 2px;
+      position: relative;
+    }
+    .spine-line::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 12px;
+      height: 12px;
+      background: #22c55e;
+      border-radius: 50%;
+      box-shadow: 0 0 16px rgba(34,197,94,0.8);
+    }
+    .spine-caption {
+      font-size: 12px;
+      color: rgba(255,255,255,0.5);
+      font-style: italic;
+      margin-top: 4px;
+      font-family: 'Cormorant Garamond', serif;
+    }
+    .spine-compare {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 4px;
+    }
+    .spine-compare-box {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .spine-compare-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 8px 10px 6px;
+      color: rgba(255,255,255,0.9);
+    }
+    .spine-compare-img {
+      aspect-ratio: 5/3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      position: relative;
+    }
+    .spine-compare-img.bad { background: linear-gradient(135deg, #2a1515, #1a0f0f); }
+    .spine-compare-img.good { background: linear-gradient(135deg, #0f2a1a, #0a1f14); }
+    .spine-badge {
+      position: absolute;
+      bottom: 8px;
+      left: 8px;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .spine-badge.bad { background: #c0392b; color: #fff; }
+    .spine-badge.good { background: #22c55e; color: #fff; }
+    .spine-compare-name {
+      font-size: 9px;
+      color: rgba(255,255,255,0.5);
+      text-align: center;
+      padding: 4px 8px 8px;
+      letter-spacing: 0.06em;
+    }
+
+    /* ── SLEEPING POSITIONS GRID ── */
+    .positions-section {
+      padding: 32px 0 0;
+      border-top: 1px solid var(--border);
+    }
+    .positions-heading {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28px;
+      font-weight: 400;
+      color: var(--charcoal);
+      text-align: center;
+      line-height: 1.2;
+      margin-bottom: 20px;
+      padding: 0 20px;
+    }
+    .positions-heading em { font-style: italic; color: var(--gold-dark); }
+    .positions-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3px;
+    }
+    .position-cell {
+      aspect-ratio: 1;
+      background: #e8edf3;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-start;
+    }
+    .position-cell:nth-child(1) { background: linear-gradient(135deg, #d8e4f0, #c0d2e4); }
+    .position-cell:nth-child(2) { background: linear-gradient(135deg, #dce6f0, #c4d4e8); }
+    .position-cell:nth-child(3) { background: linear-gradient(135deg, #e0e8f4, #c8d8ec); }
+    .position-cell:nth-child(4) { background: linear-gradient(135deg, #d4e0ee, #bcceE0); }
+    .position-icon {
+      font-size: 48px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -60%);
+      opacity: 0.3;
+    }
+    .position-label {
+      background: rgba(28,28,36,0.75);
+      color: #fff;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 8px 12px;
+      width: 100%;
+    }
+
+    /* ── DIMENSIONS SECTION ── */
+    .dimensions-section {
+      background: #f8f5f0;
+      padding: 32px 20px;
+      border-top: 1px solid var(--border);
+      text-align: center;
+    }
+    .dimensions-eyebrow {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+    .dimensions-heading {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 26px;
+      font-weight: 500;
+      color: var(--charcoal);
+      line-height: 1.2;
+      margin-bottom: 24px;
+    }
+    .dimensions-heading strong { font-weight: 600; }
+    .pillow-dims-wrap {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      max-width: 320px;
+      margin-bottom: 28px;
+    }
+    .pillow-dims-shape {
+      width: 100%;
+      aspect-ratio: 5/3;
+      background: linear-gradient(160deg, #e8eef5 0%, #c8d4de 40%, #a8b8c8 100%);
+      border-radius: 50% 50% 40% 40% / 40% 40% 35% 35%;
+      box-shadow: 0 16px 48px rgba(0,0,0,0.12);
+      position: relative;
+    }
+    .pillow-dims-center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 22%;
+      height: 32%;
+      background: radial-gradient(circle, rgba(180,200,220,0.5), transparent);
+      border-radius: 50%;
+    }
+    .dim-arrow-h {
+      position: absolute;
+      bottom: -28px;
+      left: 0;
+      right: 0;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .dim-line { flex: 1; height: 1.5px; background: var(--charcoal); }
+    .dim-arrow-v {
+      position: absolute;
+      right: -36px;
+      top: 0;
+      bottom: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+    }
+    .dim-line-v { flex: 1; width: 1.5px; background: var(--charcoal); }
+    .dim-value {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--charcoal);
+      white-space: nowrap;
+    }
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 12px;
+    }
+    .benefit-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+    .benefit-icon-circle {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      border: 1.5px solid var(--charcoal);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+    }
+    .benefit-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-align: center;
+      color: var(--charcoal);
+      line-height: 1.4;
+    }
+
     /* ── RATINGS TRIO ── */
     .ratings-trio {
       display: flex;
@@ -1064,29 +1357,65 @@
 
 <div class="divider"></div>
 
-<!-- PROBLEM / SOLUTION SECTION -->
-<div class="section">
-  <h2 class="section-heading">Ce qui se passe<br><em>pendant votre sommeil</em></h2>
+<!-- SPINE ALIGNMENT SECTION -->
+<div class="spine-section">
+  <div class="spine-eyebrow">Technologie brevetée</div>
+  <h2 class="spine-heading">Un alignement naturel<br>pour votre colonne vertébrale</h2>
 
-  <div class="before-after">
-    <div class="before-img" style="aspect-ratio:16/9;background:linear-gradient(135deg,#f5e0e0,#e8c8c8);display:flex;align-items:center;justify-content:center;position:relative;">
-      <p class="ba-placeholder" style="color:#a05050;">Oreiller ordinaire — tensions cervicales, posture non soutenue, douleurs au réveil</p>
-      <div class="ba-label" style="background:rgba(220,80,80,0.9);color:#fff;">✕</div>
+  <!-- Hero placeholder — remplacer par votre photo "personne dormant sur l'oreiller, colonne verte" -->
+  <div class="spine-hero">
+    <div class="spine-hero-inner">
+      <div class="spine-pillow-shape"></div>
+      <div class="spine-line"></div>
     </div>
-    <div class="after-img" style="aspect-ratio:16/9;background:linear-gradient(135deg,#e0eef5,#c8dde8);display:flex;align-items:center;justify-content:center;position:relative;">
-      <p class="ba-placeholder" style="color:#305a70;">Oreiller Silencio — alignement parfait, colonne vertébrale soutenue, réveil reposé</p>
-      <div class="ba-label" style="background:rgba(40,150,90,0.9);color:#fff;">✓</div>
-    </div>
+    <p class="spine-caption" style="position:absolute;bottom:12px;left:0;right:0;">Alignement cervical optimal — colonne soutenue toute la nuit</p>
   </div>
 
-  <div class="problem-block">
-    <div class="problem-title">Oreillers conventionnels</div>
-    <p class="problem-text">S'affaissent et s'aplatissent au fil de la nuit, provoquant des torsions douloureuses au niveau de la nuque. Chaque matin, votre corps paie le prix d'un mauvais soutien.</p>
+  <!-- Comparison: bad vs good -->
+  <div class="spine-compare">
+    <div class="spine-compare-box">
+      <div class="spine-compare-label">Oreiller classique</div>
+      <div class="spine-compare-img bad">
+        😣
+        <div class="spine-badge bad">✕</div>
+      </div>
+      <div class="spine-compare-name">Colonne non alignée</div>
+    </div>
+    <div class="spine-compare-box">
+      <div class="spine-compare-label" style="color:var(--gold);">Oreiller Silencio</div>
+      <div class="spine-compare-img good">
+        😌
+        <div class="spine-badge good">✓</div>
+      </div>
+      <div class="spine-compare-name">Alignement parfait</div>
+    </div>
   </div>
+</div>
 
-  <div class="problem-block">
-    <div class="problem-title" style="color:var(--gold-dark);">L'oreiller Silencio</div>
-    <p class="problem-text">Conçu en collaboration avec des ostéopathes et kinésithérapeutes italiens, le Silencio maintient parfaitement l'alignement tête–cou–épaules toute la nuit, quelle que soit votre position. Réveillez-vous sans douleur, pleinement reposé.</p>
+<!-- SLEEPING POSITIONS GRID -->
+<div class="positions-section">
+  <h2 class="positions-heading">Conçu pour<br><em>toutes les positions</em></h2>
+  <div class="positions-grid">
+    <div class="position-cell">
+      <!-- Remplacer par photo "sur le côté" -->
+      <div class="position-icon">🛌</div>
+      <div class="position-label">Sur le côté</div>
+    </div>
+    <div class="position-cell">
+      <!-- Remplacer par photo "sur le dos" -->
+      <div class="position-icon">😴</div>
+      <div class="position-label">Sur le dos</div>
+    </div>
+    <div class="position-cell">
+      <!-- Remplacer par photo "sur le ventre" -->
+      <div class="position-icon">💤</div>
+      <div class="position-label">Sur le ventre</div>
+    </div>
+    <div class="position-cell">
+      <!-- Remplacer par photo "positions changeantes" -->
+      <div class="position-icon">🔄</div>
+      <div class="position-label">Positions changeantes</div>
+    </div>
   </div>
 </div>
 
@@ -1103,6 +1432,53 @@
   <div class="rating-item">
     <span class="stars">★★★★★</span>
     <span class="label">Ergonomie</span>
+  </div>
+</div>
+
+<!-- DIMENSIONS + BENEFITS -->
+<div class="dimensions-section">
+  <div class="dimensions-eyebrow">Soulagez vos douleurs et retrouvez</div>
+  <h2 class="dimensions-heading"><strong>Un sommeil réparateur.</strong></h2>
+
+  <!-- Pillow with dimension arrows -->
+  <div style="display:flex;justify-content:center;">
+    <div class="pillow-dims-wrap">
+      <div class="pillow-dims-shape">
+        <div class="pillow-dims-center"></div>
+      </div>
+      <!-- horizontal arrow -->
+      <div class="dim-arrow-h">
+        <div class="dim-line"></div>
+        <span class="dim-value">62 cm</span>
+        <div class="dim-line"></div>
+      </div>
+      <!-- vertical arrow -->
+      <div class="dim-arrow-v">
+        <div class="dim-line-v"></div>
+        <span class="dim-value" style="writing-mode:horizontal-tb;">37 cm</span>
+        <div class="dim-line-v"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4 benefit icons -->
+  <div class="benefits-grid" style="margin-top:52px;">
+    <div class="benefit-item">
+      <div class="benefit-icon-circle">🫁</div>
+      <div class="benefit-label">Soulage le cou<br>et le dos</div>
+    </div>
+    <div class="benefit-item">
+      <div class="benefit-icon-circle">💨</div>
+      <div class="benefit-label">Réduit l'apnée<br>du sommeil</div>
+    </div>
+    <div class="benefit-item">
+      <div class="benefit-icon-circle">🌿</div>
+      <div class="benefit-label">Réduit le reflux<br>gastrique</div>
+    </div>
+    <div class="benefit-item">
+      <div class="benefit-icon-circle">💆</div>
+      <div class="benefit-label">Soulage<br>les épaules</div>
+    </div>
   </div>
 </div>
 
