@@ -1595,10 +1595,9 @@
 <div class="product-gallery">
   <!-- VUE 0 : Vue principale — fond navy, oreiller blanc/gris, badges -->
   <div class="gallery-panel" id="view-0">
-    <div class="hero-dark-wrap">
-      <div class="hero-dark-glow"></div>
-      <div class="hero-dark-pillow"></div>
-      <div class="hero-badges">
+    <div class="hero-dark-wrap" style="position:relative;">
+      <img src="IMG_9720.jpeg" alt="Oreiller Silencio" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;">
+      <div class="hero-badges" style="position:relative;z-index:2;">
         <div class="hero-badge-circle badge-navy">CertiPUR<br>Certifié</div>
         <div class="hero-badge-circle badge-green">OEKO<br>TEX®</div>
         <div class="hero-badge-circle">60 NUITS<br>D'ESSAI</div>
@@ -1606,22 +1605,10 @@
     </div>
   </div>
 
-  <!-- VUE 1 : Vue de face — style "Matins légers. Nuque détendue." -->
+  <!-- VUE 1 : Vue de face -->
   <div class="gallery-panel" id="view-1" style="display:none;">
-    <div style="position:relative;background:linear-gradient(160deg,#050e18 0%,#0a1e2e 40%,#061420 100%);aspect-ratio:1/1.1;display:flex;align-items:center;justify-content:center;overflow:hidden;">
-      <!-- Halo teal -->
-      <div style="position:absolute;top:42%;left:50%;transform:translate(-50%,-50%);width:300px;height:200px;background:radial-gradient(ellipse,rgba(0,100,130,0.3) 0%,transparent 70%);pointer-events:none;"></div>
-      <!-- Texte en haut -->
-      <div style="position:absolute;top:0;left:0;right:0;padding:20px 20px 0;text-align:left;">
-        <div style="font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:500;color:#fff;line-height:1.1;margin-bottom:4px;">Matins légers.<br>Nuque détendue.</div>
-        <div style="font-size:13px;color:rgba(255,255,255,0.5);letter-spacing:0.04em;">Soutien cervical ergonomique.</div>
-      </div>
-      <!-- Oreiller vue de face -->
-      <div style="width:90%;aspect-ratio:5/3;background:linear-gradient(160deg,#f4f4f4 0%,#e0e0e0 30%,#c8c8c8 65%,#b0b0b0 100%);border-radius:50% 50% 44% 44%/42% 42% 36% 36%;box-shadow:0 24px 80px rgba(0,0,0,0.75),0 0 50px rgba(0,100,130,0.15),inset 0 3px 10px rgba(255,255,255,0.5);margin-top:20px;position:relative;">
-        <div style="position:absolute;top:18%;left:50%;transform:translateX(-50%);width:55%;height:18%;background:radial-gradient(ellipse,rgba(255,255,255,0.5),transparent);border-radius:50%;"></div>
-        <div style="position:absolute;top:46%;left:50%;transform:translate(-50%,-50%);width:22%;height:30%;background:radial-gradient(circle,rgba(200,210,220,0.45),transparent);border-radius:50%;"></div>
-      </div>
-      <!-- Badge garantie bas droite -->
+    <div style="position:relative;aspect-ratio:1/1.1;overflow:hidden;">
+      <img src="IMG_9721.jpeg" alt="Oreiller Silencio — vue de face" style="width:100%;height:100%;object-fit:cover;">
       <div style="position:absolute;bottom:14px;right:14px;background:rgba(255,255,255,0.92);border-radius:10px;padding:8px 12px;text-align:center;box-shadow:0 2px 12px rgba(0,0,0,0.4);">
         <div style="font-size:8px;font-weight:700;letter-spacing:0.1em;color:#555;margin-bottom:1px;">GUARANTEE</div>
         <div style="font-size:9px;font-weight:700;color:var(--charcoal);letter-spacing:0.06em;">60 nuits d'essai</div>
@@ -1631,34 +1618,22 @@
 
   <!-- VUE 2 : Matières & détails -->
   <div class="gallery-panel" id="view-2" style="display:none;">
-    <div style="background:var(--cream);aspect-ratio:1/1.1;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px;padding:24px;">
-      <div style="font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--charcoal);font-style:italic;margin-bottom:8px;">Matières &amp; détails</div>
-      <div style="width:80%;aspect-ratio:4/3;background:linear-gradient(135deg,#e8e8e8,#d0d0d0);border-radius:12px;box-shadow:0 8px 30px rgba(0,0,0,0.1);"></div>
-      <p style="font-size:12px;color:var(--text-muted);text-align:center;font-style:italic;font-family:'Cormorant Garamond',serif;">Housse bambou-polyester respirante<br>Mousse certifiée CertiPUR</p>
+    <div style="position:relative;aspect-ratio:1/1.1;overflow:hidden;">
+      <img src="IMG_9722.jpeg" alt="Matières & détails Silencio" style="width:100%;height:100%;object-fit:cover;">
     </div>
   </div>
 
   <!-- VUE 3 : Positions de sommeil -->
   <div class="gallery-panel" id="view-3" style="display:none;">
-    <div style="background:#e8edf5;aspect-ratio:1/1.1;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;padding:20px;">
-      <div style="font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--charcoal);font-style:italic;">Toutes positions</div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;width:100%;">
-        <div style="background:#d0dae8;border-radius:8px;aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;letter-spacing:0.08em;color:var(--charcoal);">SUR LE CÔTÉ</div>
-        <div style="background:#c8d4e4;border-radius:8px;aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;letter-spacing:0.08em;color:var(--charcoal);">SUR LE DOS</div>
-        <div style="background:#d4dcea;border-radius:8px;aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;letter-spacing:0.08em;color:var(--charcoal);">SUR LE VENTRE</div>
-        <div style="background:#ccd8e6;border-radius:8px;aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;letter-spacing:0.08em;color:var(--charcoal);text-align:center;">POSITIONS<br>CHANGEANTES</div>
-      </div>
+    <div style="position:relative;aspect-ratio:1/1.1;overflow:hidden;">
+      <img src="IMG_9723.jpeg" alt="Positions de sommeil Silencio" style="width:100%;height:100%;object-fit:cover;">
     </div>
   </div>
 
   <!-- VUE 4 : Taille & dimensions -->
   <div class="gallery-panel" id="view-4" style="display:none;">
-    <div style="background:#f8f5f0;aspect-ratio:1/1.1;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:16px;padding:24px;">
-      <div style="font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--charcoal);font-style:italic;">Dimensions</div>
-      <div style="position:relative;width:80%;">
-        <div style="width:100%;aspect-ratio:5/3;background:linear-gradient(160deg,#e8eef5,#c8d4de);border-radius:50% 50% 40% 40%/42% 42% 34% 34%;box-shadow:0 8px 30px rgba(0,0,0,0.1);"></div>
-        <div style="text-align:center;margin-top:12px;font-family:'Cormorant Garamond',serif;font-size:16px;color:var(--charcoal);">62 cm × 37 cm × 11 cm</div>
-      </div>
+    <div style="position:relative;aspect-ratio:1/1.1;overflow:hidden;">
+      <img src="IMG_9725.jpeg" alt="Dimensions Silencio" style="width:100%;height:100%;object-fit:cover;">
     </div>
   </div>
 
@@ -1672,19 +1647,19 @@
   <!-- Thumbnails -->
   <div class="gallery-thumbs">
     <div class="thumb active" onclick="switchView(0)">
-      <div class="thumb-placeholder">Vue<br>principale</div>
+      <img src="IMG_9720.jpeg" alt="Vue principale">
     </div>
-    <div class="thumb" onclick="switchView(1)" style="background:#0c1828;">
-      <div class="thumb-placeholder" style="color:rgba(255,255,255,0.6);">Vue<br>de face</div>
+    <div class="thumb" onclick="switchView(1)">
+      <img src="IMG_9721.jpeg" alt="Vue de face">
     </div>
     <div class="thumb" onclick="switchView(2)">
-      <div class="thumb-placeholder">Matières<br>&amp; détails</div>
+      <img src="IMG_9722.jpeg" alt="Matières & détails">
     </div>
     <div class="thumb" onclick="switchView(3)">
-      <div class="thumb-placeholder">Positions<br>de sommeil</div>
+      <img src="IMG_9723.jpeg" alt="Positions de sommeil">
     </div>
     <div class="thumb" onclick="switchView(4)">
-      <div class="thumb-placeholder">Taille &amp;<br>dimensions</div>
+      <img src="IMG_9725.jpeg" alt="Dimensions">
     </div>
   </div>
 </div>
@@ -1734,9 +1709,8 @@
       <div class="pain-icon-label">Réveil<br>douloureux</div>
     </div>
   </div>
-  <!-- Remplacer par photo personne souffrant au réveil -->
-  <div class="pain-photo-placeholder">
-    Photo : personne au réveil, tensions au cou et épaules
+  <div style="border-radius:12px;overflow:hidden;margin-bottom:16px;">
+    <img src="IMG_9726.jpeg" alt="Douleurs cervicales — Silencio" style="width:100%;display:block;aspect-ratio:4/3;object-fit:cover;">
   </div>
   <p class="pain-caption">Un mauvais soutien cervical pendant la nuit<br><em>abîme votre corps chaque jour.</em></p>
 </div>
@@ -1746,18 +1720,16 @@
   <div class="avantapres-block avant">
     <div class="avantapres-tag">Avant</div>
     <p class="avantapres-annotation">Compression cervicale = <strong>déclenche vos douleurs</strong> et perturbe votre sommeil réparateur.</p>
-    <!-- Remplacer par photo "position incorrecte + annotations" -->
-    <div class="avantapres-photo">
-      Photo : personne dormant sur oreiller classique, posture incorrecte
+    <div class="avantapres-photo" style="padding:0;overflow:hidden;border-radius:10px;">
+      <img src="IMG_9727.jpeg" alt="Avant — oreiller classique" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;">
       <div class="avantapres-badge">✕</div>
     </div>
   </div>
   <div class="avantapres-block apres">
     <div class="avantapres-tag">Après</div>
     <p class="avantapres-annotation">Cervicales alignées = <strong>douleurs réduites</strong>, sommeil profond, réveil léger.</p>
-    <!-- Remplacer par photo "position correcte avec Silencio" -->
-    <div class="avantapres-photo">
-      Photo : personne dormant sur Silencio, alignement parfait
+    <div class="avantapres-photo" style="padding:0;overflow:hidden;border-radius:10px;">
+      <img src="IMG_9727.jpeg" alt="Après — oreiller Silencio" style="width:100%;height:100%;object-fit:cover;object-position:bottom;display:block;">
       <div class="avantapres-badge">✓</div>
     </div>
   </div>
@@ -1935,27 +1907,8 @@
 <!-- SLEEPING POSITIONS GRID -->
 <div class="positions-section">
   <h2 class="positions-heading">Conçu pour<br><em>toutes les positions</em></h2>
-  <div class="positions-grid">
-    <div class="position-cell">
-      <!-- Remplacer par photo "sur le côté" -->
-      <div class="position-icon">🛌</div>
-      <div class="position-label">Sur le côté</div>
-    </div>
-    <div class="position-cell">
-      <!-- Remplacer par photo "sur le dos" -->
-      <div class="position-icon">😴</div>
-      <div class="position-label">Sur le dos</div>
-    </div>
-    <div class="position-cell">
-      <!-- Remplacer par photo "sur le ventre" -->
-      <div class="position-icon">💤</div>
-      <div class="position-label">Sur le ventre</div>
-    </div>
-    <div class="position-cell">
-      <!-- Remplacer par photo "positions changeantes" -->
-      <div class="position-icon">🔄</div>
-      <div class="position-label">Positions changeantes</div>
-    </div>
+  <div style="width:100%;overflow:hidden;">
+    <img src="IMG_9723.jpeg" alt="Toutes positions de sommeil — Silencio" style="width:100%;display:block;object-fit:cover;">
   </div>
 </div>
 
@@ -1996,9 +1949,8 @@
       <div class="ib-label">Moins de ronflements</div>
     </div>
   </div>
-  <!-- Remplacer par photo lifestyle personne endormie sereinement -->
-  <div class="icons-banner-hero">
-    Photo : personne dormant paisiblement — ambiance lumineuse et douce
+  <div class="icons-banner-hero" style="padding:0;overflow:hidden;">
+    <img src="IMG_9728.jpeg" alt="Sommeil paisible — Silencio" style="width:100%;height:100%;object-fit:cover;display:block;">
   </div>
   <div class="icons-banner-caption">Un confort qui<br><strong>répare vos nuits</strong></div>
 </div>
@@ -2052,14 +2004,8 @@
 
 <!-- PILLOW DIAGRAM -->
 <div class="pillow-diagram">
-  <div class="pillow-img-placeholder">
-    <div class="pillow-shape">
-      <div class="pillow-center"></div>
-      <div class="pillow-dot-line">
-        <div class="pillow-dot"></div>
-        <div class="pillow-line"></div>
-      </div>
-    </div>
+  <div style="border-radius:16px;overflow:hidden;margin-bottom:20px;aspect-ratio:4/3;">
+    <img src="IMG_9722.jpeg" alt="Détails Silencio" style="width:100%;height:100%;object-fit:cover;display:block;">
   </div>
 
   <div class="diagram-label">Noyau Central</div>
