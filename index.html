@@ -1169,85 +1169,113 @@
     /* ── HERO DARK ── */
     .hero-dark-wrap {
       position: relative;
-      background: linear-gradient(160deg, #0a1520 0%, #0d1e2e 50%, #081018 100%);
-      aspect-ratio: 3/4;
+      background: #0c1828;
+      aspect-ratio: 1/1.1;
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
       overflow: hidden;
     }
     .hero-dark-glow {
       position: absolute;
-      top: 30%;
+      top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 280px;
-      height: 180px;
-      background: radial-gradient(ellipse, rgba(20,120,160,0.35) 0%, transparent 70%);
+      width: 320px;
+      height: 200px;
+      background: radial-gradient(ellipse, rgba(180,200,220,0.08) 0%, transparent 70%);
       pointer-events: none;
     }
     .hero-dark-pillow {
-      width: 88%;
+      width: 92%;
       aspect-ratio: 4/3;
-      background: linear-gradient(160deg, #f0f0f0 0%, #d8d8d8 40%, #b0b0b0 100%);
+      background: linear-gradient(150deg, #f2f2f2 0%, #e0e0e0 35%, #c8c8c8 70%, #a8a8a8 100%);
       border-radius: 52% 52% 42% 42% / 44% 44% 36% 36%;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.6), 0 0 40px rgba(20,120,160,0.2);
+      box-shadow:
+        0 24px 70px rgba(0,0,0,0.7),
+        0 0 60px rgba(255,255,255,0.04),
+        inset 0 2px 8px rgba(255,255,255,0.5);
       position: relative;
       flex-shrink: 0;
+    }
+    .hero-dark-pillow::before {
+      content: '';
+      position: absolute;
+      top: 20%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60%;
+      height: 20%;
+      background: radial-gradient(ellipse, rgba(255,255,255,0.45), transparent);
+      border-radius: 50%;
     }
     .hero-dark-pillow::after {
       content: '';
       position: absolute;
-      top: 38%;
+      top: 44%;
       left: 50%;
       transform: translate(-50%,-50%);
-      width: 26%;
-      height: 30%;
-      background: radial-gradient(circle, rgba(255,255,255,0.4), transparent);
+      width: 24%;
+      height: 28%;
+      background: radial-gradient(circle, rgba(200,210,220,0.5), transparent);
       border-radius: 50%;
     }
-    .hero-dark-text {
+    /* badges top-right comme Soya */
+    .hero-badges {
       position: absolute;
-      top: 16px;
-      left: 0; right: 0;
-      text-align: center;
-      padding: 0 20px;
+      top: 14px;
+      right: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      align-items: flex-end;
     }
-    .hero-dark-title {
+    .hero-badge-circle {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.92);
+      border: 1px solid rgba(255,255,255,0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 7.5px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      line-height: 1.25;
+      color: var(--charcoal);
+      padding: 5px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+    }
+    .hero-badge-circle.badge-navy {
+      background: var(--charcoal);
+      color: #fff;
+    }
+    .hero-badge-circle.badge-green {
+      background: #1a7a4a;
+      color: #fff;
+    }
+    /* headline sous le hero */
+    .hero-headline {
+      background: #0c1828;
+      padding: 20px 20px 16px;
+      text-align: center;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .hero-headline-title {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 26px;
+      font-size: 24px;
       font-weight: 500;
       color: #fff;
-      line-height: 1.1;
-      margin-bottom: 6px;
+      line-height: 1.2;
+      margin-bottom: 4px;
     }
-    .hero-dark-sub {
-      font-size: 12px;
+    .hero-headline-sub {
+      font-size: 11px;
+      color: rgba(255,255,255,0.45);
+      letter-spacing: 0.12em;
       font-weight: 400;
-      color: rgba(255,255,255,0.55);
-      letter-spacing: 0.1em;
-    }
-    .hero-guarantee-badge {
-      position: absolute;
-      bottom: 14px;
-      right: 14px;
-      background: rgba(255,255,255,0.92);
-      border-radius: 8px;
-      padding: 8px 12px;
-      text-align: center;
-      font-size: 9px;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      color: var(--charcoal);
-      line-height: 1.4;
-    }
-    .hero-guarantee-badge .guar-num {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 20px;
-      font-weight: 600;
-      display: block;
-      color: var(--charcoal);
     }
 
     /* ── PAIN RECOGNITION ── */
@@ -1565,17 +1593,72 @@
 
 <!-- PRODUCT GALLERY -->
 <div class="product-gallery">
-  <!-- Hero sombre premium — remplacer le .hero-dark-pillow par une vraie <img> -->
-  <div class="hero-dark-wrap">
-    <div class="hero-dark-glow"></div>
-    <div class="hero-dark-text">
-      <div class="hero-dark-title">Matins légers.<br>Nuque détendue.</div>
-      <div class="hero-dark-sub">Soutien cervical ergonomique.</div>
+  <!-- VUE 0 : Vue principale — fond navy, oreiller blanc/gris, badges -->
+  <div class="gallery-panel" id="view-0">
+    <div class="hero-dark-wrap">
+      <div class="hero-dark-glow"></div>
+      <div class="hero-dark-pillow"></div>
+      <div class="hero-badges">
+        <div class="hero-badge-circle badge-navy">CertiPUR<br>Certifié</div>
+        <div class="hero-badge-circle badge-green">OEKO<br>TEX®</div>
+        <div class="hero-badge-circle">60 NUITS<br>D'ESSAI</div>
+      </div>
     </div>
-    <div class="hero-dark-pillow"></div>
-    <div class="hero-guarantee-badge">
-      <span class="guar-num">60</span>
-      NUITS<br>D'ESSAI
+  </div>
+
+  <!-- VUE 1 : Vue de face — style "Matins légers. Nuque détendue." -->
+  <div class="gallery-panel" id="view-1" style="display:none;">
+    <div style="position:relative;background:linear-gradient(160deg,#050e18 0%,#0a1e2e 40%,#061420 100%);aspect-ratio:1/1.1;display:flex;align-items:center;justify-content:center;overflow:hidden;">
+      <!-- Halo teal -->
+      <div style="position:absolute;top:42%;left:50%;transform:translate(-50%,-50%);width:300px;height:200px;background:radial-gradient(ellipse,rgba(0,100,130,0.3) 0%,transparent 70%);pointer-events:none;"></div>
+      <!-- Texte en haut -->
+      <div style="position:absolute;top:0;left:0;right:0;padding:20px 20px 0;text-align:left;">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:500;color:#fff;line-height:1.1;margin-bottom:4px;">Matins légers.<br>Nuque détendue.</div>
+        <div style="font-size:13px;color:rgba(255,255,255,0.5);letter-spacing:0.04em;">Soutien cervical ergonomique.</div>
+      </div>
+      <!-- Oreiller vue de face -->
+      <div style="width:90%;aspect-ratio:5/3;background:linear-gradient(160deg,#f4f4f4 0%,#e0e0e0 30%,#c8c8c8 65%,#b0b0b0 100%);border-radius:50% 50% 44% 44%/42% 42% 36% 36%;box-shadow:0 24px 80px rgba(0,0,0,0.75),0 0 50px rgba(0,100,130,0.15),inset 0 3px 10px rgba(255,255,255,0.5);margin-top:20px;position:relative;">
+        <div style="position:absolute;top:18%;left:50%;transform:translateX(-50%);width:55%;height:18%;background:radial-gradient(ellipse,rgba(255,255,255,0.5),transparent);border-radius:50%;"></div>
+        <div style="position:absolute;top:46%;left:50%;transform:translate(-50%,-50%);width:22%;height:30%;background:radial-gradient(circle,rgba(200,210,220,0.45),transparent);border-radius:50%;"></div>
+      </div>
+      <!-- Badge garantie bas droite -->
+      <div style="position:absolute;bottom:14px;right:14px;background:rgba(255,255,255,0.92);border-radius:10px;padding:8px 12px;text-align:center;box-shadow:0 2px 12px rgba(0,0,0,0.4);">
+        <div style="font-size:8px;font-weight:700;letter-spacing:0.1em;color:#555;margin-bottom:1px;">GUARANTEE</div>
+        <div style="font-size:9px;font-weight:700;color:var(--charcoal);letter-spacing:0.06em;">60 nuits d'essai</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- VUE 2 : Matières & détails -->
+  <div class="gallery-panel" id="view-2" style="display:none;">
+    <div style="background:var(--cream);aspect-ratio:1/1.1;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px;padding:24px;">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--charcoal);font-style:italic;margin-bottom:8px;">Matières &amp; détails</div>
+      <div style="width:80%;aspect-ratio:4/3;background:linear-gradient(135deg,#e8e8e8,#d0d0d0);border-radius:12px;box-shadow:0 8px 30px rgba(0,0,0,0.1);"></div>
+      <p style="font-size:12px;color:var(--text-muted);text-align:center;font-style:italic;font-family:'Cormorant Garamond',serif;">Housse bambou-polyester respirante<br>Mousse certifiée CertiPUR</p>
+    </div>
+  </div>
+
+  <!-- VUE 3 : Positions de sommeil -->
+  <div class="gallery-panel" id="view-3" style="display:none;">
+    <div style="background:#e8edf5;aspect-ratio:1/1.1;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;padding:20px;">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--charcoal);font-style:italic;">Toutes positions</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;width:100%;">
+        <div style="background:#d0dae8;border-radius:8px;aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;letter-spacing:0.08em;color:var(--charcoal);">SUR LE CÔTÉ</div>
+        <div style="background:#c8d4e4;border-radius:8px;aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;letter-spacing:0.08em;color:var(--charcoal);">SUR LE DOS</div>
+        <div style="background:#d4dcea;border-radius:8px;aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;letter-spacing:0.08em;color:var(--charcoal);">SUR LE VENTRE</div>
+        <div style="background:#ccd8e6;border-radius:8px;aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;letter-spacing:0.08em;color:var(--charcoal);text-align:center;">POSITIONS<br>CHANGEANTES</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- VUE 4 : Taille & dimensions -->
+  <div class="gallery-panel" id="view-4" style="display:none;">
+    <div style="background:#f8f5f0;aspect-ratio:1/1.1;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:16px;padding:24px;">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--charcoal);font-style:italic;">Dimensions</div>
+      <div style="position:relative;width:80%;">
+        <div style="width:100%;aspect-ratio:5/3;background:linear-gradient(160deg,#e8eef5,#c8d4de);border-radius:50% 50% 40% 40%/42% 42% 34% 34%;box-shadow:0 8px 30px rgba(0,0,0,0.1);"></div>
+        <div style="text-align:center;margin-top:12px;font-family:'Cormorant Garamond',serif;font-size:16px;color:var(--charcoal);">62 cm × 37 cm × 11 cm</div>
+      </div>
     </div>
   </div>
 
@@ -1588,19 +1671,19 @@
 
   <!-- Thumbnails -->
   <div class="gallery-thumbs">
-    <div class="thumb active">
+    <div class="thumb active" onclick="switchView(0)">
       <div class="thumb-placeholder">Vue<br>principale</div>
     </div>
-    <div class="thumb">
-      <div class="thumb-placeholder">Vue<br>de face</div>
+    <div class="thumb" onclick="switchView(1)" style="background:#0c1828;">
+      <div class="thumb-placeholder" style="color:rgba(255,255,255,0.6);">Vue<br>de face</div>
     </div>
-    <div class="thumb">
+    <div class="thumb" onclick="switchView(2)">
       <div class="thumb-placeholder">Matières<br>&amp; détails</div>
     </div>
-    <div class="thumb">
+    <div class="thumb" onclick="switchView(3)">
       <div class="thumb-placeholder">Positions<br>de sommeil</div>
     </div>
-    <div class="thumb">
+    <div class="thumb" onclick="switchView(4)">
       <div class="thumb-placeholder">Taille &amp;<br>dimensions</div>
     </div>
   </div>
@@ -2163,13 +2246,16 @@
     item.classList.toggle('open');
   }
 
-  /* ── Thumb selection ── */
-  document.querySelectorAll('.thumb').forEach(function(t) {
-    t.addEventListener('click', function() {
-      document.querySelectorAll('.thumb').forEach(function(x){ x.classList.remove('active'); });
-      t.classList.add('active');
+  /* ── Gallery view switching ── */
+  function switchView(index) {
+    for (var i = 0; i < 5; i++) {
+      var panel = document.getElementById('view-' + i);
+      if (panel) panel.style.display = (i === index) ? 'block' : 'none';
+    }
+    document.querySelectorAll('.thumb').forEach(function(t, i) {
+      t.classList.toggle('active', i === index);
     });
-  });
+  }
 </script>
 </body>
 </html>
